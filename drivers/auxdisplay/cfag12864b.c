@@ -333,7 +333,7 @@ static int __init cfag12864b_init(void)
 
 	/* ks0108_init() must be called first */
 	if (!ks0108_isinited()) {
-		printk(KERN_ERR CFAG12864B_NAME ": ERROR: "
+		printk(KERN_ERR CFAG12864B_NAME ": ERROR:"
 			"ks0108 is not initialized\n");
 		goto none;
 	}
@@ -341,7 +341,7 @@ static int __init cfag12864b_init(void)
 
 	cfag12864b_buffer = (unsigned char *) get_zeroed_page(GFP_KERNEL);
 	if (cfag12864b_buffer == NULL) {
-		printk(KERN_ERR CFAG12864B_NAME ": ERROR: "
+		printk(KERN_ERR CFAG12864B_NAME ": ERROR:"
 			"can't get a free page\n");
 		ret = -ENOMEM;
 		goto none;
